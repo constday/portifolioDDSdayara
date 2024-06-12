@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-image: url(a.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 0.5rem 0;
+        }
+       
+        nav ul {
+            list-style: none;
+            padding: 0;
+            
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 0.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 40%;
+            margin: 0 auto;
+            overflow: hidden;
+            color: white;
+
+        }
+        .container a:hover{
+            color: blue;
+        }
+        section {
+            margin: 2rem 0;
+        }
+        .card {
+            background: rgba(92, 85, 85, 0.7);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 20px;
+        }
+        .card:hover{
+            background: rgba(70, 65, 65, 0.7);
+            transform: scale(1.0);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: flex;
+            width: 100%;
+            bottom: 0;
+        }
+        #contato {
+            margin-bottom: 10em;
+        }
+        .submenu {
+            display: none;
+            background: #666;
+            padding: 0.5rem;
+        }
+        .submenu a {
+            display: block;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-decoration: none;
+        }
+        .submenu a:hover {
+            background: #777;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+        
+
+    </style>
+    <script>
+        function toggleSubmenu() {
+            var submenu = document.getElementById('submenu');
+            if (submenu.style.display === 'block') {
+                submenu.style.display = 'none';
+            } else {
+                submenu.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="background-video">
+            <source src="backgroundf.mp4" type="video/mp4">
+        </video>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" onclick="toggleSubmenu()">☰</a>
+                    <div id="submenu" class="submenu">
+                        <a href="#sobre">Sobre Mim</a>
+                        <a href="#projetos">Projetos</a>
+                        <a href="#habilidades">Habilidades</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <div class="card">
+                <p>Olá! Me chamo Dayara Constantino, uma entusiasta de desenvolvimento web que adora criar 
+                    soluções criativas e eficazes. Possuo algum conhecimento em C Sharp e estou em processo de aprendizado de HTML, 
+                    gosto especialmente de enfrentar projetos desafiadores..</p>
+            </div>
+        </section>
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <div class="card">
+                <h3>Janela MDI</h3>
+                <p>O projeto tem com baso na criação de um o formulário principal aonde aparecerá como um contêiner MDI. Com MenuStrip, você pode criar janelas separadas para o sistema de cadastro de uma escola, tudo dentro do formulário principal.
+
+                    Operação
+                    A janela principal funciona como um contêiner, mantendo todas as outras janelas juntas. Cuida de organizar e orientar as ações das janelas filhas.
+                    Janelas filhas: são como pequenas janelas que aparecem dentro do contêiner principal, oferecendo mais opções e informações. Eles podem ser abertos, fechados, movidos e redimensionados no formulário principal.
+                    Essa estrutura é ótima para quando você tem muitas coisas diferentes para fazer ao mesmo tempo, como trabalhar em documentos diferentes ou usar partes diferentes de um aplicativo. Ajuda a manter tudo organizado e torna mais fácil alternar entre coisas diferentes sem se confundir..</p>
+            </div>
+            <div class="card">
+                <h3>Sistema de Agendas</h3>
+                <p>Oferece um solução eficaz de organização para uma agenda.</p>
+            </div>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="card">
+                <ul>
+                    <li>C#</li>
+                    <li>HTML</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <div class="card">
+                <p>Entre em contato comigo através do email: <a href="mailto:seuemail@example.com">dayaraconstantino2005@gmail.com</a></p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dayara Constantino. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
